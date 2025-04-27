@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acoustify - Music Player</title>
+    <link rel="stylesheet" href="home.css">
+    <link href="https://fonts.googleapis.com/css2?family=Ms+Madi&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Sidebar Navigation -->
+        <nav class="sidebar">
+            <div class="logo">
+                <h2>Acoustify</h2>
+            </div>
+            <ul class="nav-links">
+                <li class="active">
+                    <a href="home.html"><i class="fas fa-home"></i> Home</a>
+                </li>
+                <li>
+                    <a href="search.html"><i class="fas fa-search"></i> Search</a>
+                </li>
+                <li>
+                    <a href="library.html"><i class="fas fa-layer-group"></i> Your Library</a>
+                </li>
+                <li>
+                    <a href="create-playlist.html"><i class="fas fa-plus-square"></i> Create Playlist</a>
+                </li>
+                <li>
+                    <a href="liked-songs.html"><i class="fas fa-heart"></i> Liked Songs</a>
+                </li>
+            </ul>
+            <div class="user-info">
+                <img src="https://via.placeholder.com/40" alt="User" class="user-avatar">
+                <span>Username</span>
+            </div>
+        </nav>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <header>
+                <div class="search-bar">
+                    <i class="fas fa-search"></i>
+                    <input type="text" placeholder="Search for songs, artists, or playlists">
+                </div>
+                <div class="user-controls">
+                    <button class="upgrade-btn">Upgrade</button>
+                    <div class="user-menu">
+                        <img src="https://via.placeholder.com/30" alt="User">
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                </div>
+            </header>
+
+            <section class="featured">
+                <h1>Good Evening</h1>
+                <div class="featured-grid">
+                    <div class="featured-item">
+                        <img src="https://via.placeholder.com/150" alt="Playlist">
+                        <h3>Liked Songs</h3>
+                    </div>
+                    <div class="featured-item">
+                        <img src="https://via.placeholder.com/150" alt="Playlist">
+                        <h3>Recently Played</h3>
+                    </div>
+                    <div class="featured-item">
+                        <img src="https://via.placeholder.com/150" alt="Playlist">
+                        <h3>Top Hits</h3>
+                    </div>
+                    <div class="featured-item">
+                        <img src="https://via.placeholder.com/150" alt="Playlist">
+                        <h3>Discover Weekly</h3>
+                    </div>
+                </div>
+            </section>
+
+            <section class="recent-plays">
+                <h2>Recently Played</h2>
+                <div class="playlist-grid">
+                    <div class="playlist-card">
+                        <div class="playlist-img">
+                            <img src="https://via.placeholder.com/200" alt="Playlist">
+                            <button class="play-btn"><i class="fas fa-play"></i></button>
+                        </div>
+                        <h4>Chill Mix</h4>
+                        <p>Your daily mix of chill tracks</p>
+                    </div>
+                    <div class="playlist-card">
+                        <div class="playlist-img">
+                            <img src="https://via.placeholder.com/200" alt="Playlist">
+                            <button class="play-btn"><i class="fas fa-play"></i></button>
+                        </div>
+                        <h4>Energy Boost</h4>
+                        <p>High-energy hits to keep you going</p>
+                    </div>
+                    <div class="playlist-card">
+                        <div class="playlist-img">
+                            <img src="https://via.placeholder.com/200" alt="Playlist">
+                            <button class="play-btn"><i class="fas fa-play"></i></button>
+                        </div>
+                        <h4>Mood Booster</h4>
+                        <p>Feel-good music for your day</p>
+                    </div>
+                    <div class="playlist-card">
+                        <div class="playlist-img">
+                            <img src="https://via.placeholder.com/200" alt="Playlist">
+                            <button class="play-btn"><i class="fas fa-play"></i></button>
+                        </div>
+                        <h4>Throwback Hits</h4>
+                        <p>Classic hits from the past</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Now Playing Bar -->
+        <footer class="now-playing">
+            <div class="track-info">
+                <img src="https://via.placeholder.com/60" alt="Track">
+                <div class="track-details">
+                    <h4>Song Name</h4>
+                    <p>Artist Name</p>
+                </div>
+                <button class="like-btn"><i class="far fa-heart"></i></button>
+            </div>
+            <div class="player-controls">
+                <div class="control-buttons">
+                    <button><i class="fas fa-random"></i></button>
+                    <button><i class="fas fa-step-backward"></i></button>
+                    <button class="play-pause"><i class="fas fa-play"></i></button>
+                    <button><i class="fas fa-step-forward"></i></button>
+                    <button><i class="fas fa-redo"></i></button>
+                </div>
+                <div class="progress-bar">
+                    <span class="time current">0:00</span>
+                    <div class="progress">
+                        <div class="progress-filled"></div>
+                    </div>
+                    <span class="time total">3:45</span>
+                </div>
+            </div>
+            <div class="volume-controls">
+                <button><i class="fas fa-volume-up"></i></button>
+                <div class="volume-bar">
+                    <div class="volume-filled"></div>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script src="home.js"></script>
+</body>
+</html> 

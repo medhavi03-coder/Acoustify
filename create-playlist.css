@@ -1,0 +1,238 @@
+/* Create Playlist Header */
+.create-playlist-header {
+    margin-bottom: 32px;
+}
+
+.create-playlist-header h1 {
+    font-size: 32px;
+    color: #F806CC;
+}
+
+/* Create Playlist Container */
+.create-playlist-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 32px;
+    background: rgba(87, 10, 87, 0.3);
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Playlist Cover */
+.playlist-cover {
+    margin-bottom: 32px;
+    text-align: center;
+}
+
+.cover-preview {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    margin: 0 auto;
+    border-radius: 8px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.cover-preview img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.cover-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.cover-overlay i {
+    font-size: 32px;
+    color: #F806CC;
+    margin-bottom: 8px;
+}
+
+.cover-overlay span {
+    color: white;
+    font-size: 14px;
+}
+
+.cover-preview:hover .cover-overlay {
+    opacity: 1;
+}
+
+/* Form Groups */
+.form-group {
+    margin-bottom: 24px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 16px;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 12px 16px;
+    background: rgba(87, 10, 87, 0.5);
+    border: 1px solid rgba(169, 16, 121, 0.3);
+    border-radius: 8px;
+    color: white;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #F806CC;
+    box-shadow: 0 0 10px rgba(248, 6, 204, 0.2);
+}
+
+.form-group textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+/* Privacy Options */
+.privacy-options {
+    display: flex;
+    gap: 24px;
+    margin-top: 8px;
+}
+
+.privacy-option {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    padding: 8px 16px;
+    border-radius: 20px;
+    background: rgba(87, 10, 87, 0.5);
+    transition: all 0.3s ease;
+}
+
+.privacy-option:hover {
+    background: rgba(169, 16, 121, 0.3);
+}
+
+.privacy-option input[type="radio"] {
+    display: none;
+}
+
+.privacy-option i {
+    color: #F806CC;
+}
+
+.privacy-option span {
+    color: white;
+}
+
+.privacy-option input[type="radio"]:checked + i + span {
+    color: #F806CC;
+}
+
+/* Form Actions */
+.form-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 16px;
+    margin-top: 32px;
+}
+
+.cancel-btn,
+.create-btn {
+    padding: 12px 24px;
+    border-radius: 25px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.cancel-btn {
+    background: transparent;
+    border: 1px solid #F806CC;
+    color: #F806CC;
+}
+
+.cancel-btn:hover {
+    background: rgba(248, 6, 204, 0.1);
+}
+
+.create-btn {
+    background: linear-gradient(45deg, #A91079, #F806CC);
+    border: none;
+    color: white;
+    position: relative;
+    overflow: hidden;
+}
+
+.create-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(248, 6, 204, 0.3);
+}
+
+.loading-spinner {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 20px;
+    height: 20px;
+    border: 3px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    border-top-color: white;
+    animation: spin 1s ease-in-out infinite;
+}
+
+@keyframes spin {
+    to { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+.create-btn.loading .btn-text {
+    opacity: 0;
+}
+
+.create-btn.loading .loading-spinner {
+    display: block;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .create-playlist-container {
+        padding: 24px;
+    }
+
+    .cover-preview {
+        width: 250px;
+        height: 250px;
+    }
+
+    .privacy-options {
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .form-actions {
+        flex-direction: column;
+    }
+
+    .cancel-btn,
+    .create-btn {
+        width: 100%;
+    }
+} 

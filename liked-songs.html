@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Liked Songs - Acoustify</title>
+    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="liked-songs.css">
+    <link href="https://fonts.googleapis.com/css2?family=Ms+Madi&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Sidebar Navigation -->
+        <nav class="sidebar">
+            <div class="logo">
+                <h2>Acoustify</h2>
+            </div>
+            <ul class="nav-links">
+                <li>
+                    <a href="home.html"><i class="fas fa-home"></i> Home</a>
+                </li>
+                <li>
+                    <a href="search.html"><i class="fas fa-search"></i> Search</a>
+                </li>
+                <li>
+                    <a href="library.html"><i class="fas fa-layer-group"></i> Your Library</a>
+                </li>
+                <li>
+                    <a href="create-playlist.html"><i class="fas fa-plus-square"></i> Create Playlist</a>
+                </li>
+                <li class="active">
+                    <a href="liked-songs.html"><i class="fas fa-heart"></i> Liked Songs</a>
+                </li>
+            </ul>
+            <div class="user-info">
+                <img src="https://via.placeholder.com/40" alt="User" class="user-avatar">
+                <span>Username</span>
+            </div>
+        </nav>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <header>
+                <div class="liked-songs-header">
+                    <div class="header-content">
+                        <h1>Liked Songs</h1>
+                        <p class="song-count">128 songs • 8h 45m</p>
+                    </div>
+                    <div class="play-all">
+                        <button class="play-btn">
+                            <i class="fas fa-play"></i>
+                            <span>Play All</span>
+                        </button>
+                    </div>
+                </div>
+                <div class="user-controls">
+                    <button class="upgrade-btn">Upgrade</button>
+                    <div class="user-menu">
+                        <img src="https://via.placeholder.com/30" alt="User">
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                </div>
+            </header>
+
+            <div class="songs-list">
+                <div class="list-header">
+                    <div class="header-item">#</div>
+                    <div class="header-item">Title</div>
+                    <div class="header-item">Artist</div>
+                    <div class="header-item">Album</div>
+                    <div class="header-item">Duration</div>
+                </div>
+
+                <div class="song-item">
+                    <div class="song-number">1</div>
+                    <div class="song-info">
+                        <img src="https://via.placeholder.com/50" alt="Song Cover">
+                        <div class="song-details">
+                            <h3>Song Title 1</h3>
+                            <p>Artist Name</p>
+                        </div>
+                    </div>
+                    <div class="song-artist">Artist Name</div>
+                    <div class="song-album">Album Name</div>
+                    <div class="song-duration">
+                        <span>3:45</span>
+                        <button class="like-btn"><i class="fas fa-heart"></i></button>
+                    </div>
+                </div>
+
+                <div class="song-item">
+                    <div class="song-number">2</div>
+                    <div class="song-info">
+                        <img src="https://via.placeholder.com/50" alt="Song Cover">
+                        <div class="song-details">
+                            <h3>Song Title 2</h3>
+                            <p>Artist Name</p>
+                        </div>
+                    </div>
+                    <div class="song-artist">Artist Name</div>
+                    <div class="song-album">Album Name</div>
+                    <div class="song-duration">
+                        <span>4:12</span>
+                        <button class="like-btn"><i class="fas fa-heart"></i></button>
+                    </div>
+                </div>
+
+                <div class="song-item">
+                    <div class="song-number">3</div>
+                    <div class="song-info">
+                        <img src="https://via.placeholder.com/50" alt="Song Cover">
+                        <div class="song-details">
+                            <h3>Song Title 3</h3>
+                            <p>Artist Name</p>
+                        </div>
+                    </div>
+                    <div class="song-artist">Artist Name</div>
+                    <div class="song-album">Album Name</div>
+                    <div class="song-duration">
+                        <span>3:30</span>
+                        <button class="like-btn"><i class="fas fa-heart"></i></button>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- Now Playing Bar -->
+        <footer class="now-playing">
+            <div class="track-info">
+                <img src="https://via.placeholder.com/60" alt="Track">
+                <div class="track-details">
+                    <h4>Song Name</h4>
+                    <p>Artist Name</p>
+                </div>
+                <button class="like-btn"><i class="far fa-heart"></i></button>
+            </div>
+            <div class="player-controls">
+                <div class="control-buttons">
+                    <button><i class="fas fa-random"></i></button>
+                    <button><i class="fas fa-step-backward"></i></button>
+                    <button class="play-pause"><i class="fas fa-play"></i></button>
+                    <button><i class="fas fa-step-forward"></i></button>
+                    <button><i class="fas fa-redo"></i></button>
+                </div>
+                <div class="progress-bar">
+                    <span class="time current">0:00</span>
+                    <div class="progress">
+                        <div class="progress-filled"></div>
+                    </div>
+                    <span class="time total">3:45</span>
+                </div>
+            </div>
+            <div class="volume-controls">
+                <button><i class="fas fa-volume-up"></i></button>
+                <div class="volume-bar">
+                    <div class="volume-filled"></div>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script src="liked-songs.js"></script>
+</body>
+</html> 

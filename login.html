@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acoustify - Music Player</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #2E0249;
+            color: white;
+            padding: 20px;
+            background: linear-gradient(135deg, #2E0249 0%, #570A57 50%, #A91079 100%);
+        }
+
+        .login-container {
+            background-color: rgba(46, 2, 73, 0.7);
+            padding: 40px;
+            width: 100%;
+            max-width: 450px;
+            text-align: center;
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(169, 16, 121, 0.3);
+            box-shadow: 0 8px 32px 0 rgba(87, 10, 87, 0.37);
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin: 20px 0 30px;
+            color: #F806CC;
+            text-shadow: 0 0 10px rgba(248, 6, 204, 0.3);
+        }
+
+        .social-login-btn {
+            width: 100%;
+            padding: 14px;
+            margin: 8px 0;
+            border-radius: 500px;
+            border: 1px solid #A91079;
+            background-color: rgba(169, 16, 121, 0.1);
+            color: white;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            transition: all 0.3s ease;
+        }
+
+        .social-login-btn:hover {
+            background-color: rgba(169, 16, 121, 0.2);
+            border-color: #F806CC;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(248, 6, 204, 0.2);
+        }
+
+        .social-login-btn img {
+            width: 24px;
+            height: 24px;
+            filter: brightness(0) invert(1);
+        }
+
+        .divider {
+            display: flex;
+            align-items: center;
+            margin: 20px 0;
+            color: #A91079;
+        }
+
+        .divider::before,
+        .divider::after {
+            content: "";
+            flex: 1;
+            height: 1px;
+            background-color: #A91079;
+        }
+
+        .divider span {
+            padding: 0 20px;
+        }
+
+        .input-group {
+            margin-bottom: 20px;
+            text-align: left;
+        }
+
+        .input-group label {
+            display: block;
+            margin-bottom: 8px;
+            color: #F806CC;
+            font-size: 0.875rem;
+            font-weight: 500;
+        }
+
+        .input-group input {
+            width: 100%;
+            padding: 14px;
+            background-color: rgba(87, 10, 87, 0.2);
+            border: 1px solid #A91079;
+            border-radius: 8px;
+            color: white;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+        }
+
+        .input-group input:focus {
+            outline: none;
+            border-color: #F806CC;
+            box-shadow: 0 0 10px rgba(248, 6, 204, 0.2);
+            background-color: rgba(87, 10, 87, 0.3);
+        }
+
+        .input-group input::placeholder {
+            color: rgba(255, 255, 255, 0.5);
+        }
+
+        .login-btn {
+            width: 100%;
+            padding: 14px;
+            margin: 20px 0;
+            border-radius: 500px;
+            border: none;
+            background: linear-gradient(45deg, #A91079, #F806CC);
+            color: white;
+            font-size: 1rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .login-btn:hover {
+            transform: scale(1.02);
+            box-shadow: 0 0 20px rgba(248, 6, 204, 0.4);
+        }
+
+        .forgot-password {
+            margin-top: 15px;
+        }
+
+        .forgot-password a {
+            color: #A91079;
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+        }
+
+        .forgot-password a:hover {
+            color: #F806CC;
+            text-shadow: 0 0 5px rgba(248, 6, 204, 0.3);
+        }
+
+        @keyframes glow {
+            0% { box-shadow: 0 0 5px rgba(248, 6, 204, 0.2); }
+            50% { box-shadow: 0 0 20px rgba(248, 6, 204, 0.4); }
+            100% { box-shadow: 0 0 5px rgba(248, 6, 204, 0.2); }
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <h1>Acoustify</h1>
+        
+        <button class="social-login-btn">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg" alt="Google">
+            Continue with Google
+        </button>
+        
+        <button class="social-login-btn">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Facebook_Logo_%282019%29.png/1024px-Facebook_Logo_%282019%29.png" alt="Facebook">
+            Continue with Facebook
+        </button>
+        
+        <button class="social-login-btn">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg" alt="Apple">
+            Continue with Apple
+        </button>
+        
+        <button class="social-login-btn">
+            Continue with phone number
+        </button>
+
+        <div class="divider">
+            <span>or</span>
+        </div>
+
+        <form>
+            <div class="input-group">
+                <label for="email">Email or username</label>
+                <input type="text" id="email" name="email" placeholder="Email or username">
+            </div>
+            
+            <div class="input-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" placeholder="Password">
+            </div>
+
+            <button type="submit" class="login-btn">Login</button>
+            
+            <div class="forgot-password">
+                <a href="#">Forgot Password?</a>
+            </div>
+        </form>
+    </div>
+</body>
+</html> 

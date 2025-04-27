@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up - Acoustify</title>
+    <link rel="stylesheet" href="music.css">
+    <link href="https://fonts.googleapis.com/css2?family=Ms+Madi&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="video-background">
+        <!-- Video background can be added here if desired -->
+    </div>
+    <div id="container">
+        <div id="signup">
+            <h1 class="logo">Acoustify</h1>
+            <form id="signupForm">
+                <table>
+                    <tr>
+                        <td><label for="fullname">Full Name</label></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="input-wrapper">
+                                <i class="fas fa-user"></i>
+                                <input type="text" id="fullname" name="fullname" maxlength="50" placeholder="Enter your full name" required>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label for="email">Email</label></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="input-wrapper">
+                                <i class="fas fa-envelope"></i>
+                                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label for="username">Username</label></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="input-wrapper">
+                                <i class="fas fa-at"></i>
+                                <input type="text" id="username" name="username" maxlength="15" placeholder="Choose a username" required>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label for="password">Password</label></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="input-wrapper">
+                                <i class="fas fa-lock"></i>
+                                <input type="password" id="password" name="password" placeholder="Create a password" required>
+                                <i class="fas fa-eye-slash toggle-password"></i>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label for="confirm-password">Confirm Password</label></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="input-wrapper">
+                                <i class="fas fa-lock"></i>
+                                <input type="password" id="confirm-password" name="confirm-password" placeholder="Confirm your password" required>
+                                <i class="fas fa-eye-slash toggle-password"></i>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" style="text-align: center;">
+                            <button type="submit" class="signup-btn">
+                                <span class="btn-text">Sign Up</span>
+                                <div class="loading-spinner"></div>
+                            </button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" style="text-align: center;">
+                            <p>Already have an account? <a href="login1.html" class="b">Login</a></p>
+                        </td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+        <div id="footer">
+            © Medhavi Chitranshi 2024
+        </div>
+    </div>
+    <script src="signup.js"></script>
+</body>
+</html> 
